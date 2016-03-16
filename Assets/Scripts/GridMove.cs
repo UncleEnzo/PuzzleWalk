@@ -1,19 +1,29 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+//TODO MELD THE CLICK AND DRAG MECHANICS INTO THIS SCRIPT
 class GridMove : MonoBehaviour {
+	//speed at which he moves
 	private float moveSpeed = 3f;
+	//size of each grid square
 	private float gridSize = 1f;
+	//you can move
 	private enum Orientation {
 		Horizontal,
 		Vertical
 	};
 	private Orientation gridOrientation = Orientation.Vertical;
+	//TODO KEEP THIS DISABLED, FOCUS ON REMOVING
 	private bool allowDiagonals = false;
+	//TODO UNSURE
 	private bool correctDiagonalSpeed = true;
+	//TODO REPLACE WITH WITH THE DRAG AND DROP MECHANIC
 	private Vector2 input;
+	//checks to see if object is moving
 	private bool isMoving = false;
+	//Starting position of object, filled in in the IEnumerator move function
 	private Vector3 startPosition;
+	//Ending position of object, filled in in the IEnumerator move function
 	private Vector3 endPosition;
 	private float t;
 	private float factor;
@@ -21,6 +31,7 @@ class GridMove : MonoBehaviour {
 	public void Update() {
 		if (!isMoving) {
 			input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+			//TODO SEEMS UNNECESSARY
 			if (!allowDiagonals) {
 				if (Mathf.Abs(input.x) > Mathf.Abs(input.y)) {
 					input.y = 0;
@@ -37,6 +48,7 @@ class GridMove : MonoBehaviour {
 	
 	public IEnumerator move(Transform transform) {
 		isMoving = true;
+		//start position == to the variables in the enumerator, horizantle and vertical
 		startPosition = transform.position;
 		t = 0;
 		
@@ -48,6 +60,7 @@ class GridMove : MonoBehaviour {
 			                          startPosition.y + System.Math.Sign(input.y) * gridSize, startPosition.z);
 		}
 		
+		//TODO SEEMS UNNECCESARY. CONSIDER EDITING OUT LATER
 		if(allowDiagonals && correctDiagonalSpeed && input.x != 0 && input.y != 0) {
 			factor = 0.7071f;
 		} else {
