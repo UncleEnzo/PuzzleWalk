@@ -15,7 +15,7 @@ GameObject:
   - 50: {fileID: 5023968}
   - 114: {fileID: 11491474}
   m_Layer: 0
-  m_Name: StartingPuzzlePoint
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,7 +126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player1: {fileID: 0}
-  player2: {fileID: 0}
   speed: 0
   frac: 0
 --- !u!212 &21223706

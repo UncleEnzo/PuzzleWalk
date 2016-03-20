@@ -7,14 +7,14 @@ using System.Collections;
 public class InteractionWithPlayer : MonoBehaviour {
 	public ParticleSystem DraggedOver;
 	public bool isActive = false;
-	private GameObject StartingPuzzlePoint;
+	private GameObject Player;
 	private ClickAndDrag ClickandDragScript;
 
 
 	void Start () {
 		//Finds the starting object and its script
-		StartingPuzzlePoint = GameObject.Find("StartingPuzzlePoint");
-		ClickandDragScript = StartingPuzzlePoint.GetComponent<ClickAndDrag>();
+		Player = GameObject.Find("Player");
+		ClickandDragScript = Player.GetComponent<ClickAndDrag>();
 		isActive = false;
 	}
 	

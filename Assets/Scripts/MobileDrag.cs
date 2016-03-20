@@ -14,7 +14,6 @@ public class MobileDrag : MonoBehaviour {
 	private float widthMinusFrac;
 	private Vector2 touchCache;
 	private Vector3 player1Pos;
-	private Vector3 player2Pos;
 	private bool touched = false;
 	private int screenHeight;
 	private int screenWidth;
