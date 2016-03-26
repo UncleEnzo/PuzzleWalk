@@ -12,17 +12,23 @@ using System.Collections;
 //TODO Disable when player backpedals over the gameobject. BUT NOT WHEN HE HITS IT WITHOUT BACK PEDALLING!!!	
 
 public class InteractionWithPlayer : MonoBehaviour {
+	//public bool StepInPuzzle = false;
 	public ParticleSystem DraggedOver;
 	public bool isActive = false;
 	private GameObject Player;
 	private ClickAndDrag ClickandDragScript;
-
-
+	//public GameObject[] winCondition;
+	
 	void Start () {
-		//Finds the starting object and its script
+		//GameObject[] winCondition = new GameObject[FindObjectOfType("PuzzlePoints")];
 		Player = GameObject.Find("Player");
 		ClickandDragScript = Player.GetComponent<ClickAndDrag>();
 		isActive = false;
+	/*	for (int i=0, i < winCondition.Length; i++){
+			if(winCondition[i] == null){
+				winCondition[i]= FindObjectOfType("PuzzlePoints");
+			}
+		}*/
 	}
 	
 	void Update () {
