@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//TODO Create OnCollisionEnter2D if InteractionWithPlayer.Wincondition array = true, return value NextLevel
+//TODO pass Value of NextLevel to ButtonMovementAndMotion Script
+
 [RequireComponent(typeof(CircleCollider2D))]
 public class EndPointScript : MonoBehaviour {
 

@@ -1,6 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//TODO Create Public Boolean for StepInPuzzle - default false.
+//TODO Create Private Boolean StepInPuzzleTriggered - default false.
+//TODO Create public boolean array Wincondition default for all objects in array is false
+//TODO On start, populate boolean array WinCondition with all objects that have StepInPuzzle = true
+//TODO Create OnCollision2D enable boolean array WinCondition set This object boolean to true 
+
+
 //TODO MAKE IT SO THAT WHEN BUMPING INTO A GAMEOBJECT YOU ALREADY TRACED OVER THE LINE STOPS
 //TODO Disable when player backpedals over the gameobject. BUT NOT WHEN HE HITS IT WITHOUT BACK PEDALLING!!!	
 
