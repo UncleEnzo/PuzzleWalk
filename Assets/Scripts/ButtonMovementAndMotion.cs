@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class ButtonMovementAndMotion : MonoBehaviour {
-	public float smoothing = 1f;
+	private float movementLerp = 0f;
 	public Transform target;
 	public float leftBoundary, rightBoundary, topBoundary, bottomBoundary;
 
@@ -10,11 +10,11 @@ public class ButtonMovementAndMotion : MonoBehaviour {
 	//TODO FIGURE OUT WHY LERP ISN"T FUCKING WORKING OVER TIME
 	
 	public IEnumerator MoveToPosition (Transform target){
-		while (Vector3.Distance (transform.position, target.position) > 0.05f) {
-			transform.position = Vector3.Lerp (transform.position, target.position, smoothing * Time.deltaTime);
-			yield return gameObject.transform.position;
+		while (Vector3.Distance (transform.position, target.position) > 0.0f) {
+			transform.position = Vector3.Lerp (transform.position, target.position, movementLerp * Time.deltaTime);
+			yield return new WaitForEndOfFrame();
 		}     
-		print ("The object has moved");
+		yield return gameObject.transform.position;
 	}
 
 	public void MoveRight () {
