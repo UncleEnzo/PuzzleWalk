@@ -10,10 +10,8 @@ GameObject:
   - 4: {fileID: 423706}
   - 212: {fileID: 21223706}
   - 58: {fileID: 5823706}
-  - 114: {fileID: 11423706}
   - 96: {fileID: 9623706}
   - 50: {fileID: 5023968}
-  - 114: {fileID: 11491474}
   - 114: {fileID: 11434124}
   m_Layer: 0
   m_Name: Player
@@ -101,20 +99,6 @@ TrailRenderer:
       rgba: 4294967295
   m_MinVertexDistance: .100000001
   m_Autodestruct: 0
---- !u!114 &11423706
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 123706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b16e9b01dbc889e4bb4cc5ec46badf39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trail: {fileID: 9623706}
-  StartingLocation: {fileID: 0}
-  MouseReleased: 0
 --- !u!114 &11434124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,26 +110,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2194cc2ea60ce7b4b9222e1ce24a384e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothing: 9.99999975e-06
   target: {fileID: 423706}
   leftBoundary: 1
   rightBoundary: 8.5
   topBoundary: 4.5
   bottomBoundary: 1
---- !u!114 &11491474
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 123706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3752eff3a8971ed459336a3948047705, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player1: {fileID: 0}
-  speed: 0
-  frac: 0
 --- !u!212 &21223706
 SpriteRenderer:
   m_ObjectHideFlags: 1

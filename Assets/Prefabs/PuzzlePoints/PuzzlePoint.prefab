@@ -10,9 +10,10 @@ GameObject:
   - 4: {fileID: 447590}
   - 212: {fileID: 21247590}
   - 58: {fileID: 5847590}
-  - 114: {fileID: 11447590}
   - 198: {fileID: 19847590}
   - 199: {fileID: 19947590}
+  - 114: {fileID: 11401624}
+  - 114: {fileID: 11499548}
   m_Layer: 0
   m_Name: PuzzlePoint
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.13000011, y: 3.01999998, z: .140000001}
+  m_LocalPosition: {x: 2, y: 3, z: 0}
   m_LocalScale: {x: 1.94649899, y: 1.94649923, z: 1.94649923}
   m_Children: []
   m_Father: {fileID: 0}
@@ -43,7 +44,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: .100000001
   m_Center: {x: 0, y: 0}
---- !u!114 &11447590
+--- !u!114 &11401624
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -51,11 +52,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 147590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10335d27bd5ea914281a8d571dd04c2b, type: 3}
+  m_Script: {fileID: 11500000, guid: d8eff68ebabc33f4ebb879ec87280644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DraggedOver: {fileID: 19847590}
-  isActive: 0
+  isActive: 1
+--- !u!114 &11499548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7fbd0f8e505664896cea273a8f32b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nearbyPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  movementSpace: 1
 --- !u!198 &19847590
 ParticleSystem:
   m_ObjectHideFlags: 1
